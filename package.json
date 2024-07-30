@@ -1,0 +1,16 @@
+{
+  "name": "playwright-with-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.11",
+    "playwright": "^1.44.0",
+    "typescript": "^5.4.5"
+  }
+}
