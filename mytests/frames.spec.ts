@@ -22,7 +22,7 @@ test("frames", async({page})=>{
 
     // Pointing to frame by URL
     const frame1 =  await page.frame({url: "https://ui.vision/demo/webtest/frames/frame_1.html"});
-    await frame1.fill("//input[@name = 'mytext1']", "I W E M M And B H")
+    // await frame1.fill("//input[@name = 'mytext1']", "I W E M M And B H")
 
 
     // Locating frame by using Locator
