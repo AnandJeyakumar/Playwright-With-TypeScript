@@ -36,29 +36,61 @@ test("Table logic", async ({page})=>{
 
     //Select Multiple products checkBox by re-usable functions in TS
 
-    await selectProduct(rows , page , 'Product 1')
-    await selectProduct(rows , page , 'Product 3')
-    await selectProduct(rows , page , 'Product 5')
-    await page.waitForTimeout(3000)
+    // await selectProduct(rows , page , 'Product 1')
+    // await selectProduct(rows , page , 'Product 3')
+    // await selectProduct(rows , page , 'Product 5')
 
 
 
     //Print all Details of Table using Looping Statement
     //This for loop is for incrementing the rows
-    for (let r=0 ; r<=await rows.count() ;r++)
+    // for (let r=0 ; r<=await rows.count() ;r++)
+    //     {
+    //         const row = rows.nth(r)
+    //         const td = row.locator('td')
+    //         // This For Loop is for Incrementing the columns
+    //         for(let c =0; c < await td.count()-1 ; c ++ )
+    //             {
+    //                 console.log("The Column Text is", await td.nth(c).textContent())
+
+    //             }
+
+    //     }
+
+
+        //Read data from all the pages in a table
+        const pageButton = await page.locator("#pagination li")
+        console.log("The Number of Button is ", await pageButton.count())
+
+
+    for(let p=0;p< await pageButton.count() ;p++)
         {
-            const row = rows.nth(r)
-            const td = row.locator('td')
-            // This For Loop is for Incrementing the columns
-            for(let c =0; c < await td.count()-1 ; c ++ )
+            if(p>0)
                 {
-                    console.log("The Column Text is", await td.nth(c).textContent())
-
+                    console.log("The Page is in ",p)
+                    await pageButton.nth(p).click()
                 }
+            for (let r=0 ; r<=await rows.count() ;r++)
+                    {
+                       const row = rows.nth(r)
+                       const td = row.locator('td')
+                               // This For Loop is for Incrementing the columns
+                        for(let c =0; c < await td.count()-1 ; c ++ )
+                           {
+                               console.log("The Column Text is", await td.nth(c).textContent())
+                   
+                           }
+                    }}
 
-        }
+            }
+        
 
-})
+
+    
+
+)
+
+
 
 async function selectProduct(rows:Locator ,page : Page, name: string)
 {
