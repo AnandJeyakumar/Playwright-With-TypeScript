@@ -5,7 +5,7 @@ import { ECDH } from "crypto";
 import { waitForDebugger } from "inspector";
 
 
-test("mouseHower", async ({page})=>{
+test("mouseRightClick", async ({page})=>{
 
     await page.goto("https://swisnl.github.io/jQuery-contextMenu/demo.html")
 
