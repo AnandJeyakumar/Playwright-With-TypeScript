@@ -1,12 +1,13 @@
-
-import{test,expect, Browser , Page, Locator, defineConfig} from "@playwright/test"
+import{test,expect, Browser , Page, Locator} from "@playwright/test"
 import exp from "constants";
 import { ECDH } from "crypto";
 import { waitForDebugger } from "inspector";
 
 
 
-test("page screenshot", async ({page})=>{
+test("Trace Viewer",async ({page})=>{
+
+    // Login
 
     await page.goto("https://www.demoblaze.com/index.html")
 
@@ -14,10 +15,7 @@ test("page screenshot", async ({page})=>{
     await page.fill("#loginusername","pavanol" )
     await page.fill("#loginpassword","test@123" )
     await page.click("//button[@onclick='logIn()']")
+    await expect(page.locator("#logout")).toBeVisible()
 
-    // await page.screenshot({path:"mytests\\Screenshots\\"+Date.now()+"HomePage.png"})
 
-    await page.waitForTimeout(2000)
-    await page.close();
 })
-
