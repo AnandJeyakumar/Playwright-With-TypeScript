@@ -1,73 +1,13 @@
-<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="18.993355">
-<testsuite name="reports.spec.ts" timestamp="2024-08-21T18:24:55.226Z" hostname="chromium" tests="3" failures="1" skipped="0" time="17.554" errors="0">
-<testcase name="Test1" classname="reports.spec.ts" time="2.214">
-</testcase>
-<testcase name="Test2" classname="reports.spec.ts" time="3.56">
-</testcase>
-<testcase name="Test3" classname="reports.spec.ts" time="11.78">
-<failure message="reports.spec.ts:19:5 Test3" type="FAILURE">
-<![CDATA[  [chromium] › reports.spec.ts:19:5 › Test3 ────────────────────────────────────────────────────────
-
-    Error: Timed out 5000ms waiting for expect(locator).toHaveTitle(expected)
-
-    Locator: locator(':root')
-    Expected string: "OrangeHR"
-    Received string: "OrangeHRM"
-    Call log:
-      - expect.toHaveTitle with timeout 5000ms
-      - waiting for locator(':root')
-      -   locator resolved to <html>…</html>
-      -   unexpected value "OrangeHRM"
-      -   locator resolved to <html>…</html>
-      -   unexpected value "OrangeHRM"
-      -   locator resolved to <html>…</html>
-      -   unexpected value "OrangeHRM"
-      -   locator resolved to <html>…</html>
-      -   unexpected value "OrangeHRM"
-      -   locator resolved to <html>…</html>
-      -   unexpected value "OrangeHRM"
-      -   locator resolved to <html>…</html>
-      -   unexpected value "OrangeHRM"
-      -   locator resolved to <html>…</html>
-      -   unexpected value "OrangeHRM"
-      -   locator resolved to <html>…</html>
-      -   unexpected value "OrangeHRM"
-      -   locator resolved to <html>…</html>
-      -   unexpected value "OrangeHRM"
-
-
-      19 | test("Test3" , async({page})=>{
-      20 |     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
-    > 21 |     await expect(page).toHaveTitle("OrangeHR")
-         |                        ^
-      22 | })
-
-        at C:\Users\USER\Documents\Playwright with TypeScript\mytests\reports.spec.ts:21:24
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\reports-Test3-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\reports-Test3-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\reports-Test3-chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\reports-Test3-chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="3.4237710000000003">
+<testsuite name="apiTest.spec.ts" timestamp="2024-08-22T16:43:39.945Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.298" errors="0">
+<testcase name="Get user" classname="apiTest.spec.ts" time="1.298">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\reports-Test3-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\reports-Test3-chromium\video.webm]]
-
-[[ATTACHMENT|test-results\reports-Test3-chromium\trace.zip]]
+<![CDATA[The response is  Promise {
+  [36m<pending>[39m,
+  [[32mSymbol(async_id_symbol)[39m]: [33m768[39m,
+  [[32mSymbol(trigger_async_id_symbol)[39m]: [33m464[39m,
+  [[32mSymbol(kResourceStore)[39m]: [90mundefined[39m
+}
 ]]>
 </system-out>
 </testcase>

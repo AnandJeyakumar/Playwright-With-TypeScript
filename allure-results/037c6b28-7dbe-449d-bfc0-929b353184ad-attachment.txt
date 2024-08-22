@@ -1,0 +1,3 @@
+The Text content of the product is === Samsung galaxy s6
+The Text content of the product is === Nokia lumia 1520
+The Text content of the product is === Nexus 6

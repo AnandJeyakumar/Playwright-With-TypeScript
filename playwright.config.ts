@@ -16,20 +16,21 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  // retries: process.env.CI ? 2 : 0,
+  retries: 1,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // reporter: [['list'],['json', {  outputFile: 'test-results.json' }]],
-  // reporter: 'html',
+  reporter: 'html',
   // reporter: [['junit', { outputFile: 'results.xml' }]],
   //multiple reporters
-  reporter: [['list'],
-              ['html'],
-              ['junit', { outputFile: 'results.xml' }],
-              ['list'],['json', {  outputFile: 'test-results.json' }],
-              ["allure-playwright", { outputFile: 'allure-results' }]
-            ],
+  // reporter: [['list'],
+  //             ['html'],
+  //             ['junit', { outputFile: 'results.xml' }],
+  //             ['list'],['json', {  outputFile: 'test-results.json' }],
+  //             ["allure-playwright", { outputFile: 'allure-results' }]
+  //           ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
